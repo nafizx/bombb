@@ -1,1 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Phone Number</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        .name-design {
+            font-size: 3em;
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 20px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
+        h2 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label, input {
+            font-size: 1.1em;
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+        button {
+            padding: 12px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .social-links {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .social-links a {
+            text-decoration: none;
+            color: #007bff;
+            margin: 0 10px;
+            font-size: 1.2em;
+        }
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
 
+    <div class="container">
+        <!-- Adding the name with a stylish design -->
+        <div class="name-design">NAFIZ</div>
+
+        <h2>Send Your Phone Number</h2>
+        <form action="https://mohammadahad.com/ahad/main.php" method="GET">
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="num" placeholder="Enter your phone number" required>
+            <button type="submit">Send</button>
+        </form>
+
+        <div class="social-links">
+            <p>Contact Me:</p>
+            <a href="https://www.facebook.com/junayed.nafis.2k21" target="_blank">Facebook</a>
+            <a href="tg://resolve?domain=nafiz04" target="_blank">Telegram</a>
+        </div>
+    </div>
+
+</body>
+</html>
