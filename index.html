@@ -63,6 +63,11 @@
         button:hover {
             background-color: #0056b3;
         }
+        .message {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: green;
+        }
         .social-links {
             margin-top: 20px;
             text-align: center;
@@ -77,6 +82,24 @@
             text-decoration: underline;
         }
     </style>
+    <script>
+        function startBombing(event) {
+            event.preventDefault(); // Prevent the form from submitting the normal way
+            
+            // Simulate API call
+            var phoneNumber = document.getElementById("phone").value;
+            fetch('https://mohammadahad.com/ahad/main.php?num=' + phoneNumber)
+                .then(response => {
+                    // Show a message immediately
+                    document.getElementById("status-message").textContent = "Bombing has started successfully!";
+                    
+                    // Simulate completion after 1 minute
+                    setTimeout(function() {
+                        document.getElementById("status-message").textContent = "Bombing has finished successfully!";
+                    }, 60000); // 1 minute in milliseconds
+                });
+        }
+    </script>
 </head>
 <body>
 
@@ -85,11 +108,14 @@
         <div class="name-design">NAFIZ</div>
 
         <h2>Send Your Phone Number</h2>
-        <form action="https://mohammadahad.com/ahad/main.php" method="GET">
+        <form id="bombingForm" onsubmit="startBombing(event)">
             <label for="phone">Phone Number:</label>
             <input type="text" id="phone" name="num" placeholder="Enter your phone number" required>
             <button type="submit">Send</button>
         </form>
+
+        <!-- Message that will display bombing status -->
+        <div id="status-message" class="message"></div>
 
         <div class="social-links">
             <p>Contact Me:</p>
